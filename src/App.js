@@ -9,6 +9,7 @@ import { Softwares } from "./components/Softwares";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { Certi } from './components/Certi';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Softwares/>
       <Experience/>
       <Projects />
+      <Certi/>
       <Contact />
       <Footer />
     </div>
