@@ -483,6 +483,67 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
+/************ experince Css ************/
+.experience-container {
+  padding: 2rem;
+  background-color: #151515;
+  text-align: center;
+}
+
+.experience-heading {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-left: 2px solid #14AD86;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 1rem 0;
+  padding-left: 2.5rem;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background-color: #14AD86;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.timeline-content {
+  background: #242424;
+  padding: 1rem;
+  border-radius: 8px;
+  border:1px solid #14AD86;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: #525252;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  color: #14AD86;
+  margin: 0;
+}
+.timeline-experince{
+  color: #a3a3a3;
+}
 
 /************ Projects Css ************/
 .contact {
@@ -500,9 +561,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form input, .contact form textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 0.001rem solid #14AD86;
   border-radius: 20px;
-  color: #fff;
+  color: #e6dede;
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
@@ -511,8 +572,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
 }
 .contact form input:focus, .contact form textarea:focus {
-  background: rgba(255, 255, 255, 1);
-  color: #121212;
+  background: #9dcbc0;
+  color: #242323;
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;
@@ -525,8 +586,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .contact form button {
   font-weight: 700;
-  color: #000;
-  background-color: #fff;
+  color: #ffffff;
+  background-color: #14AD86;
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
@@ -564,19 +625,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.newsletter-bx {
-  background: #FFFFFF;
-  border-radius: 55px;
-  color: #121212;
-  padding: 85px 125px;
-  margin-bottom: 80px;
-  margin-top: -122px;
-}
-.newsletter-bx h3 {
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.2em;
-}
+
+
 .new-email-bx {
   background: #fff;
   padding: 5px;
@@ -619,7 +669,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .new-email-bx button {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 20px 65px;
-  color: #fff;
+  color: #ce2a2a;
   font-weight: 500;
   letter-spacing: 0.5px;
   border-radius: 18px;
