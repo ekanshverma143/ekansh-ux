@@ -480,6 +480,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   top: 50%;
   opacity: 1;
 }
+
+.project-link-btn {
+  display: block;
+  margin: 15px auto 0;
+  padding: 8px 20px;
+  background-color: #14AD86;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-link-btn:hover {
+  background-color: #0f8a6a;
+  transform: translateY(-2px);
+}
 .proj-txtx h4 {
   font-size: 30px;
   font-weight: 700;
@@ -638,7 +657,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .certi-container {
   padding: 2rem;
   text-align: center;
-  background-color: #151515;
+  background-color: #1e1d1d;
 }
 
 .certi-heading {

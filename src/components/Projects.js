@@ -4,6 +4,12 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import mobileImg1 from "../assets/img/mobile-img1.png";
+import mobileImg2 from "../assets/img/mobile-img2.png";
+import mobileImg3 from "../assets/img/mobile-img3.png";
+import designImg1 from "../assets/img/design-img1.png";
+import designImg2 from "../assets/img/design-img2.png";
+import designImg3 from "../assets/img/design-img3.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -11,34 +17,66 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Sorted",
+      description: "Cmplete Ui/Ux for Brand Sorted",
       imgUrl: projImg1,
+      link: "https://www.figma.com/proto/SiO1XymPSVCxmtHUokjE48/sorted-final-design?node-id=0-1&t=Aq714wZYIQVesT2T-1"
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
+      link: "/",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
+      link: "#",
+    },
+  ];
+
+  const mobileProjects = [
+    {
+      title: "Anocare",
+      description: "UI/UX Design",
+      imgUrl: mobileImg1,
+      link: "#",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Mobile App 2",
+      description: "Development",
+      imgUrl: mobileImg2,
+      link: "#",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Mobile App 3",
+      description: "Prototyping",
+      imgUrl: mobileImg3,
+      link: "#",
+    },
+
+
+  ];
+
+  const graphicDesignProjects = [
+    {
+      title: "Brand Identity",
+      description: "Logo Design",
+      imgUrl: designImg1,
+      link: "#"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Marketing Materials",
+      description: "Print Design",
+      imgUrl: designImg2,
+      link: "#",
+    },
+    {
+      title: "Social Media",
+      description: "Graphics Design",
+      imgUrl: designImg3,
+      link: "#",
     },
   ];
 
@@ -61,7 +99,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="second">Mobile UI</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">case Studies</Nav.Link>
+                      <Nav.Link eventKey="third">Graphic Designs</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -79,11 +117,33 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                      <Row>
+                        {
+                          mobileProjects.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <Row>
+                        {
+                          graphicDesignProjects.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
