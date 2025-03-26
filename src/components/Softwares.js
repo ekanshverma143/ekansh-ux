@@ -29,14 +29,14 @@ export const Softwares = () => {
   };
 
   return (
-    <section className="softwares" id="softwares">
+    <section className="skill" id="softwares">
         <div className="container">
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Tools</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        <p>Softwares are just medium to express your ideas.</p>
+                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="Image" />
                                 <h5>Figma</h5>
@@ -47,11 +47,11 @@ export const Softwares = () => {
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="Image" />
-                                <h5>Graphic Designing</h5>
+                                <h5>Adobe Illustrator</h5>
                             </div>
                             <div className="item">
                                 <img src={meter2} alt="Image" />
-                                <h5>Front-end Development</h5>
+                                <h5>Adobe Photoshop</h5>
                             </div>
                         </Carousel>
                     </div>

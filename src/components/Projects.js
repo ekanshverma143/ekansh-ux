@@ -18,7 +18,7 @@ export const Projects = () => {
   const projects = [
     {
       title: "Sorted",
-      description: "Cmplete Ui/Ux for Brand Sorted",
+      description: "Complete UI/UX for Brand Sorted",
       imgUrl: projImg1,
       link: "https://www.figma.com/proto/SiO1XymPSVCxmtHUokjE48/sorted-final-design?node-id=0-1&t=Aq714wZYIQVesT2T-1"
     },
@@ -55,8 +55,6 @@ export const Projects = () => {
       imgUrl: mobileImg3,
       link: "#",
     },
-
-
   ];
 
   const graphicDesignProjects = [
@@ -89,9 +87,9 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p style={{ marginBottom: '30px' }}>I began my design journey as a graphic designer during my first year of college. By my third year, I transitioned into UI/UX and web design, evolving into a graphic designer turned UI/UX specialist. </p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab" style={{ borderBottom: '2px solid #14AD86' }}>
                     <Nav.Item>
                       <Nav.Link eventKey="first">Websites UI</Nav.Link>
                     </Nav.Item>
@@ -111,7 +109,8 @@ export const Projects = () => {
                               <ProjectCard
                                 key={index}
                                 {...project}
-                                />
+                                style={{ margin: '15px 0' }}
+                              />
                             )
                           })
                         }
@@ -125,7 +124,7 @@ export const Projects = () => {
                               <ProjectCard
                                 key={index}
                                 {...project}
-                                />
+                              />
                             )
                           })
                         }
@@ -139,7 +138,7 @@ export const Projects = () => {
                               <ProjectCard
                                 key={index}
                                 {...project}
-                                />
+                              />
                             )
                           })
                         }
@@ -152,7 +151,6 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-    
     </section>
   )
 }

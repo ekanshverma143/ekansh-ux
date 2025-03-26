@@ -1,28 +1,21 @@
 import React, { useState } from "react";
+import certi1 from "../assets/img/certi1.jpeg";
+import certi2 from "../assets/img/certi2.jpeg";
+import certi3 from "../assets/img/certi3.jpeg";
 
+const certificateImages = [certi1, certi2, certi3];
 
-const certificateImages = [
-    require("../assets/img/certi1.jpeg"),
-     require("../assets/img/certi2.jpeg"),
-     require("../assets/img/certi3.jpeg"),
-    // require('./assets/cert4.jpg'),
-    // require('./assets/cert5.jpg'),
-  ];
 export const Certi = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleNext = () => {
-    if (currentIndex < certificateImages.length - 3) {
-      setCurrentIndex(currentIndex + 1);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % certificateImages.length);
   };
 
   const handlePrevious = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + certificateImages.length) % certificateImages.length);
   };
 
   const openModal = (image) => {
@@ -38,9 +31,10 @@ export const Certi = () => {
     <div className="certi-container">
       <h2 className="certi-heading">Certificates</h2>
       <div className="certi-carousel">
-        <button className="arrow-button" onClick={handlePrevious} disabled={currentIndex === 0}>
+        <button className="arrow-button" onClick={handlePrevious}>
           &lt;
         </button>
+
         <div className="certi-images">
           {certificateImages.slice(currentIndex, currentIndex + 3).map((image, index) => (
             <img
@@ -52,16 +46,33 @@ export const Certi = () => {
             />
           ))}
         </div>
-        <button className="arrow-button" onClick={handleNext} disabled={currentIndex >= certificateImages.length - 3}>
+
+        <button className="arrow-button" onClick={handleNext}>
           &gt;
         </button>
       </div>
 
-      {/* Modal for enlarged image */}
-      {isModalOpen && (
+      {/* Modal with navigation */}
+      {isModalOpen && selectedImage && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            
+            <button 
+              className="arrow-button" 
+              onClick={() => setSelectedImage(certificateImages[(certificateImages.indexOf(selectedImage) - 1 + certificateImages.length) % certificateImages.length])}
+            >
+              &lt;
+            </button>
+
             <img src={selectedImage} alt="Enlarged Certificate" className="modal-image" />
+
+            <button 
+              className="arrow-button" 
+              onClick={() => setSelectedImage(certificateImages[(certificateImages.indexOf(selectedImage) + 1) % certificateImages.length])}
+            >
+              &gt;
+            </button>
+
             <button className="close-button" onClick={closeModal}>X</button>
           </div>
         </div>
