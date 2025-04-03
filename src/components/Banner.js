@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { ArrowRightCircle,ViewList,Eyeglasses } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -66,7 +66,7 @@ export const Banner = () => {
       <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{`Hi! I'm Ekansh `} 
         <span 
           className="txt-rotate" 
-          dataPeriod="800" 
+          data-period="800" 
           data-rotate='[" UI/UX Designer", " Web Designer", " Graphic Designer"]'>
           <span className="wrap">{text}</span>
         </span>
@@ -78,11 +78,37 @@ export const Banner = () => {
         <li> Crafting sleek interfaces, building responsive websites, and creating eye-catching graphics.</li>
         <li> Turning ideas into visually stunning realities. Let’s create something extraordinary together!</li>
       </ul>
-
-      <button onClick={handleDownload} className="mt-4" style={{ backgroundColor: '#14AD86', color: '#fff', border: 'none', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer' }}>
-        Download Resume <ArrowRightCircle size={25} />
-      </button>
+      <div className="mt-1 " style={{ display: 'flex',gap: '20px', marginTop: '20px' }}>
+        <button onClick={handleDownload} className="mt-4" 
+                                       style={{ backgroundColor: '#14AD86',
+                                                color: '#fff', 
+                                                border: 'none', 
+                                                padding: '10px 20px',
+                                                 borderRadius: '5px', 
+                                                 cursor: 'pointer' }}>
+            Download Resume <ArrowRightCircle size={25} />
+         </button>
+      <a 
+  href="/ekanshresume" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="mt-4" 
+  style={{ 
+    backgroundColor: '#14AD86', 
+    color: '#fff', 
+    border: 'none', 
+    padding: '10px 20px', 
+    borderRadius: '5px', 
+    cursor: 'pointer', 
+    textDecoration: 'none',
+    display: 'inline-block'
+  }}>
+  View Resume <Eyeglasses size={25} />
+</a>
+      </div>
+      
     </div>
+    
   )}
 </TrackVisibility>
 
