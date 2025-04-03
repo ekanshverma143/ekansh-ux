@@ -23,13 +23,13 @@ export const Projects = () => {
       link: "https://www.figma.com/proto/SiO1XymPSVCxmtHUokjE48/sorted-final-design?node-id=0-1&t=Aq714wZYIQVesT2T-1"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "UI for Digital Twin",
+      description: "Designed multiple pages for Digital Twin UI",
       imgUrl: projImg2,
       link: "/",
     },
     {
-      title: "Business Startup",
+      title: "Qriocity - A case Study",
       description: "Design & Development",
       imgUrl: projImg3,
       link: "#",
