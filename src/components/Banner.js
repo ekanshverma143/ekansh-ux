@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/headerimg.png";
 import { ArrowRightCircle,ViewList,Eyeglasses } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "UI/UX Designer", "Product Designer", "Graphic Designer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -63,16 +63,16 @@ export const Banner = () => {
   {({ isVisible }) => (
     <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
       <span className="tagline">Welcome to my Portfolio</span>
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{`Hi! I'm Ekansh `} 
+      <h1 style={{ fontSize: '3.5rem', fontWeight: 'bold' }}>{`Hi! I'm Ekansh `} 
         <span 
           className="txt-rotate" 
-          data-period="800" 
-          data-rotate='[" UI/UX Designer", " Web Designer", " Graphic Designer"]'>
+          data-period="500" 
+          data-rotate='[" UI/UX Designer", " Product Designer", " Graphic Designer"]'>
           <span className="wrap">{text}</span>
         </span>
       </h1>
       
-      <ul className="list-disc ml-6 space-y-2 text-lg">
+      <ul className="list-disc ml-6 space-y-2 text-lg text-gray-700">
         <li> Designing intuitive experiences that make users go "Wow!"</li>
         <li> Blending creativity with clean, functional code.</li>
         <li> Crafting sleek interfaces, building responsive websites, and creating eye-catching graphics.</li>

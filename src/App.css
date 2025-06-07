@@ -1,18 +1,9 @@
 /************ Custom Font ************/
-@font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Bold.ttf');
-	font-weight: 700;
-}
-@font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Medium.ttf');
-	font-weight: 500;
-}
-@font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Book.ttf');
-	font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+  --font-primary: 'VT323', monospace;
+  --font-heading: 'Press Start 2P', cursive;
 }
 @keyframes fadeIn {
   from {
@@ -50,7 +41,7 @@ body {
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
-  font-family: 'Centra', sans-serif !important;
+  font-family: var(--font-primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -260,7 +251,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 200px 0 100px 0;
+  padding: 100px 0 100px 0;
   background: #121212;
   background-position: top center;
   background-size: cover;
@@ -373,6 +364,44 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
+.arcade-theme {
+  background: radial-gradient(#111 50%, #000);
+  color: #00ff88;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+.skill-bx h2 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.skill-bx p {
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.skill-slider .item {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px dashed #00ff88;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-slider .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.skill-slider img {
+  height: 80px;
+  margin-bottom: 10px;
+}
+
 
 /************ Projects Css ************/
 .project {
