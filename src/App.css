@@ -92,7 +92,7 @@ p.danger {
 /************ Navbar Css ************/
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 15px 0;
+  padding: 2px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -100,8 +100,8 @@ nav.navbar {
   transition: 0.32s ease-in-out;
   font-family: var(--font-primary);
   background-color: #0a0a0a;
-  box-shadow: 0 0 10px #00ff88;
-  border-bottom: 2px solid #00ff88;
+ 
+  border-bottom: 1px solid #1c533a;
 }
 
 nav.navbar.scrolled {
@@ -537,46 +537,60 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .project h2 {
-  color: #ffffff;
-  text-shadow: 0 0 10px #14AD86, 0 0 20px #14AD86;
+  color: #00ff88;
+  font-size: 24px;
+  letter-spacing: 2px;
+ font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 6px #0ff;
 }
 
-/* ✨ Animated Glow on Paragraph Text */
-.project p {
-  color: #B8FEE0;
-  text-shadow: 0 0 6px #14AD86;
-}
-
-/* 💡 Tab Glow Hover & Active Effects */
 .project .nav.nav-pills .nav-link {
   color: #ffffff;
-  text-shadow: 0 0 6px #14AD86;
+  font-family: var(--font-primary);
+  font-size: 22px;
   transition: 0.3s ease-in-out;
 }
 .project .nav.nav-pills .nav-link:hover {
-  background: #14AD86;
-  color: #000;
+  background: #00ff88;
+  color: #0b0b0b;
   text-shadow: none;
 }
 
-/* 🖼️ Project Card Hover Effects */
-.proj-imgbx {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.proj-imgbx:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px #14AD86;
-}
 
-/* ✨ Glowing Text on Hover inside Project Card */
 .proj-txtx h4 {
-  color: #fff;
-  text-shadow: 0 0 6px #14AD86;
+  color: #ffffff;
+ font-family: var(--font-primary);
+ font-size:29px;
+ text-align: center;
+   padding-bottom: 1px;
+  margin-bottom: 0%;
 }
 .proj-txtx span {
-  color: #B8FEE0;
-  text-shadow: 0 0 4px #14AD86;
+  color: #00ff88;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  text-align: center;
+
+  display: block;           /* Makes it span full width */
+  width: 100%;              /* Optional but helps centering */
+  padding-right: 0;         /* Remove right padding for perfect centering */
+  margin: 0 auto;           /* Ensures it's centered in flex/grid layouts */
 }
+.project-link-btn{
+  color: #0022ff;
+  display: block;
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.project-link-btn:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 
 /* 📱 Responsive Tabs Fix */
 @media (max-width: 768px) {
@@ -594,70 +608,42 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 /* Glow section title */
-.project h2 {
-  font-size: 2.5rem;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 0 8px #14AD86;
-  margin-bottom: 10px;
-}
 
 /* Project intro paragraph */
 .project p {
-  color: #B8FEE0;
+  color: #ffffff;
   text-align: center;
   max-width: 700px;
   margin: 0 auto 30px;
-  text-shadow: 0 0 6px #14AD86;
+  text-shadow: 0 0 6px #00ff88;
+  font-family: var(--font-primary);
+  letter-spacing: 1px;
 }
 
-/* Glowing tab pills */
-.glow-tabs .nav-link {
-  background-color: transparent !important;
-  border: 1px solid #14AD86;
-  color: #14AD86;
-  text-shadow: 0 0 4px #14AD86;
-  transition: all 0.3s ease-in-out;
-}
 
-.glow-tabs .nav-link.active,
-.glow-tabs .nav-link:hover {
-  background-color: #14AD86 !important;
-  color: #000 !important;
-  box-shadow: 0 0 15px #14AD86;
-}
 
 /* Project Card Styling (if not in ProjectCard.css already) */
 .proj-imgbx {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 0 10px #14AD86;
+  box-shadow: 0 0 10px #00ff88;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .proj-imgbx:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 20px #14AD86;
+  box-shadow: 0 0 20px #00ff88;
 }
 
-.proj-txtx h4 {
-  margin-top: 10px;
-  color: #14AD86;
-  text-shadow: 0 0 4px #14AD86;
-}
 
-.proj-txtx span {
-  color: #B8FEE0;
-  font-size: 0.95rem;
-  text-shadow: 0 0 3px #14AD86;
-}
 
 
 /* Experience Section */
 .experience {
   background: #121212;
-  padding: 50px 20px;        
+  padding: 50px 20px; 
+  font-family: var(--font-primary);       
   text-align: center;
 }
 
@@ -668,10 +654,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Heading */
 .experience-heading {
-  font-size: 2.2rem;           /* Slightly smaller heading */
-  color: #ffffff;
-  margin-bottom: 30px;         /* Reduced margin */
-  font-weight: 700;
+  color: #00ff88;
+  font-size: 24px;
+  letter-spacing: 2px;
+ font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 6px #0ff;
 }
 
 /* Timeline Styling */
@@ -722,7 +711,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transform: translateY(-50%);
   width: 14px;
   height: 14px;
-  background: #14AD86;
+  background: #00ff88;
   border-radius: 50%;
   z-index: 1;
   transition: transform 0.3s;
@@ -739,21 +728,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Title, Date & Description */
 .timeline-title {
-  font-size: 1.4rem;            /* Slightly smaller title */
-  color: #14AD86;
+  font-size: 24px;            /* Slightly smaller title */
+  color: #00ff88;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
 .timeline-date {
-  font-size: 0.95rem;           /* Reduced date size */
+  font-size: 20px;           /* Reduced date size */
   color: #777;
   margin-bottom: 10px;
 }
 
 .timeline-description {
-  font-size: 0.95rem;           /* Slightly smaller description */
-  color: #555;
+  font-size: 1rem;           /* Slightly smaller description */
+  color: #d3d3d3;
   line-height: 1.4;
 }
 
@@ -762,7 +751,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   content: '';
   position: absolute;
   width: 4px;
-  background: #14AD86;
+  background: #00ff88;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -794,7 +783,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Projects Css ************/
 .contact {
   background: #121212;
-  padding: 60px 0 200px 0;
+    font-family: var(--font-primary);
+  padding: 60px 0 10px 0;
 }
 .contact img {
   width: 92%;
@@ -802,12 +792,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact h2 {
 	font-size: 40px;
 	font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .contact form input, .contact form textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
-  border: 0.001rem solid #14AD86;
+  border: 0.001rem solid #00ff88;
   border-radius: 20px;
   color: #e6dede;
   margin: 0 0 8px 0;
@@ -833,7 +823,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button {
   font-weight: 700;
   color: #ffffff;
-  background-color: #14AD86;
+  background-color: #00ff88;
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
@@ -864,17 +854,127 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ certi Css ************/
+/* 🎮 Arcade Glow Enhancements */
 
+.certi-heading {
+  font-size: 24px;
+color: #00ff88;
+text-shadow: 0 0 6px #0ff;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 0.5rem;
+}
+.certi-description{
+  font-family: var(--font-primary);
+}
+
+.certi-image {
+  border: 2px solid #00ff88;
+
+  box-shadow: 0 0 10px #14AD86, 0 0 15px #00ff88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.certi-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #14AD86, 0 0 25px #00ff88;
+}
+
+.arrow-button {
+  background: #00ff88;
+  border: 2px solid #14AD86;
+  color: black;
+  font-weight: bold;
+  text-shadow: 0 0 5px #000;
+  box-shadow: 0 0 10px #14AD86;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arrow-button:hover {
+  background: #14AD86;
+  color: #000;
+  box-shadow: 0 0 15px #14AD86;
+}
+
+/* 🛑 Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 8px #00ff88;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #0f8d6a;
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 0 15px #00ff88;
+}
+
+/* 🔲 Modal Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(18, 18, 18, 0.7); /* translucent dark background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1rem;
+}
+
+/* 🎮 Modal Card */
+.modal-content {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 80%;
+  max-height: 80%;
+  box-shadow: 0 0 15px #00ff88;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 📸 Modal Image */
+.modal-image {
+  max-width: 50vw;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 12px #00ff88;
+}
+
+
+/* 🎯 Layout */
 .certi-container {
   padding: 5rem;
   text-align: center;
   background-color: #121212;
-}
-
-.certi-heading {
-  font-size: 2rem;
-  color: #ffffff;
-  margin-bottom: 2rem;
 }
 
 .certi-carousel {
@@ -882,8 +982,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  max-width: 80%;
-  margin:  auto;
+  max-width: 90%;
+  margin: auto;
 }
 
 .certi-images {
@@ -892,112 +992,73 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
 }
 
-.certi-image {
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.arrow-button {
-  background-color: #14AD86;             /* Updated to your brand color */
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 44px;                           /* Slightly larger for better clickability */
-  height: 44px;
-  font-size: 1.3rem;                     /* Slightly larger icon size */
-  cursor: pointer;
-  transition: all 0.3s ease;             /* Smooth transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* Softer shadow */
-}
-/* Hover Effect */
-.arrow-button:hover {
-  background-color: #0f8d6a;             /* Darker shade on hover */
-  transform: scale(1.1);                 /* Subtle scaling */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-}
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+  .certi-container {
+    padding: 2rem 1rem;
+  }
 
-/* Active/Clicked State */
-.arrow-button:active {
-  transform: scale(0.95);                /* Slight shrink on click */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-.arrow-button:disabled {
-  background-color: #ccc;                /* Gray-out when disabled */
-  color: #999;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
-}
+  .certi-carousel {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #161616;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow:hidden;
-  animation: fadeIn 0.5s ease forwards;
-}
+  .certi-images {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.modal-content {
-  background: white;
-  padding: 0 1rem;
-  border-radius: 8px;
-  position: relative;
-  transform: translateY(20px);
-  animation: slideUp 0.5s ease forwards;
-}
+  .certi-image {
+    width: 90%;
+    height: auto;
+  }
 
-.modal-image {
-  max-width: 250vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 80vh;
-  border-radius: 8px;
-}
+  .modal-image {
+    max-width: 90vw;
+    max-height: 70vh;
+  }
 
-.close-button {
-  position:absolute;
-  top: 10px;
-  right: 10px;
-  background-color:#14AD86;
-  color: white;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+  .arrow-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 }
 
 /************ Footer Css ************/
 /* Footer Styling */
 .footer {
   background:#121212;                /* Clean background */
-  padding: 30px 0;                    /* Reduced padding */
+  padding: 30px 0;     
+  font-family: var(--font-primary);               /* Reduced padding */
   text-align: center;                  /* Center alignment */
 }
 
 .footer-container {
   display: flex;
+    font-family: var(--font-primary);
   flex-direction: column;
   align-items: center;
   gap: 12px;                           /* Spacing between icons and text */
 }
 
 /* Social Icons */
+.footer{
+    font-family: var(--font-primary);
+}
+.footer-social {
+  display: flex;
+  font-family: var(--font-primary);
+  justify-content: center;
+  align-items: center;
+  gap: 16px;                           /* Spacing between icons */
+  margin-bottom: 20px;                 /* Space above the text */
+}
 .footer-social a {
   margin: 0 8px;                       /* Small spacing between icons */
   transition: transform 0.3s ease;
+    font-family: var(--font-primary);
 }
 
 .footer-social img {
@@ -1016,4 +1077,5 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 0.9rem;                   /* Smaller, subtle text */
   color: #555;
   margin: 0;
+  font-family: var(--font-primary);
 }

@@ -43,7 +43,6 @@ export const Experience = () => {
     <section className="experience" id="experience">
       <div className="experience-container">
         <h2 className="experience-heading">Experience</h2>
-
         <div className="timeline">
           {experiences.map((experience, index) => (
             <div
@@ -54,8 +53,6 @@ export const Experience = () => {
                 <div className="timeline-circle" />
                 <h3 className="timeline-title">{experience.title}</h3>
                 <p className="timeline-date">{experience.date}</p>
-                
-                {/* 🔹 Check if description is an array or string */}
                 {Array.isArray(experience.description) ? (
                   <ul className="timeline-description">
                     {experience.description.map((point, idx) => (

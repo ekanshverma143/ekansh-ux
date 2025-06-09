@@ -15,7 +15,7 @@ export const Contact = () => {
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <Users size={150} style={{ color: '#14AD86' }} />
-                  <h3 className="mt-3 fs-3">Let's Connect!</h3>
+                  <h3 className="mt-3 fs-3 ">Let's Connect!</h3>
                   <p className="fs-6">Reach out and let's collaborate on something amazing.</p>
                 </div>
               )}
